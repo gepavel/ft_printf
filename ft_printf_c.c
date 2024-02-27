@@ -6,7 +6,7 @@
 /*   By: gepavel <gepavel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 16:06:00 by gepavel           #+#    #+#             */
-/*   Updated: 2024/02/20 17:20:15 by gepavel          ###   ########.fr       */
+/*   Updated: 2024/02/27 18:50:47 by gepavel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int	ft_printf_c(int c)
 {
-	if (!write (1, &c, 1))
-		return (-1);
-	return (1);
+	return (write(1, &c, 1));
 }

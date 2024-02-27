@@ -6,7 +6,7 @@
 /*   By: gepavel <gepavel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:59:47 by gepavel           #+#    #+#             */
-/*   Updated: 2024/02/20 18:19:14 by gepavel          ###   ########.fr       */
+/*   Updated: 2024/02/27 18:45:56 by gepavel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,23 +27,13 @@ int	main()
 	x = printf(">%c", c);
 	printf("-%d-\n", x);
 
-	printf("\033[0;35m----->[%%s]<-----\033[0m\n");
-
-	char	str[] = "hello world";
-
-//	x = ft_printf(" NULL %s NULL ", (char *)0);
-	printf("-%d-\n", x);
-	x = printf(">%s", str);
-	printf("-%d-\n", x);
-/*
 	printf("\033[0;35m----->[%%p]<-----\033[0m\n");
 	
 	
-	x = ft_printf(" NULL %s NULL ", (char *)0);
+	x = ft_printf("%s", (char *)0);
 	printf("-%d-\n", x);
-	x = printf(">%s", str);
+	x = printf(">%s", NULL);
 	printf("-%d-\n", x);
-*/
 
 	printf("\033[0;35m----->[%%di]<-----\033[0m\n");
 
@@ -54,9 +44,9 @@ int	main()
 
 	printf("\033[0;35m----->[errors]<-----\033[0m\n");
 
-	x = ft_printf("\001\002\007\v\010\f\r\n");
+	x = ft_printf("\010\n");
 	printf("-%d-\n", x);
-	x = printf("\001\002\007\v\010\f\r\n");
+	x = printf("\010\n");
 	printf("-%d-\n", x);
 
 	return (0);
