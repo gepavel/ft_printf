@@ -6,7 +6,7 @@
 /*   By: gepavel <gepavel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:31:58 by gepavel           #+#    #+#             */
-/*   Updated: 2024/02/20 14:44:40 by gepavel          ###   ########.fr       */
+/*   Updated: 2024/02/20 16:24:28 by gepavel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int	ft_printf(const char *format, ...)
 {
 	va_list			arg;
 	unsigned int	x;
+	int				aux;
 
 	va_start(arg, format);
 	x = 0;
@@ -43,11 +44,15 @@ int	ft_printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			x += ft_check_format(arg, *format++);
+			aux = ft_check_format(arg, *format++);
+			if (aux == - 1)
+				return (-1);
+			x += aux;
 		}
 		else
 		{
-			ft_printf_c(*format++);
+			if (!ft_printf_c(*format++))
+				return (-1);
 			x++;
 		}
 	}

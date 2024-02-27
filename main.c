@@ -6,7 +6,7 @@
 /*   By: gepavel <gepavel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:59:47 by gepavel           #+#    #+#             */
-/*   Updated: 2024/02/08 20:02:13 by gepavel          ###   ########.fr       */
+/*   Updated: 2024/02/20 18:19:14 by gepavel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,13 @@ int	main()
 	printf("-%d-\n", x);
 	x = printf(">%d~%i\n", INT_MAX, INT_MIN);
 	printf("-%d-\n", x);
+
+	printf("\033[0;35m----->[errors]<-----\033[0m\n");
+
+	x = ft_printf("\001\002\007\v\010\f\r\n");
+	printf("-%d-\n", x);
+	x = printf("\001\002\007\v\010\f\r\n");
+	printf("-%d-\n", x);
+
 	return (0);
 }
