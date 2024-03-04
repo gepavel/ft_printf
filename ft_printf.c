@@ -6,7 +6,7 @@
 /*   By: gepavel <gepavel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:31:58 by gepavel           #+#    #+#             */
-/*   Updated: 2024/02/27 18:32:45 by gepavel          ###   ########.fr       */
+/*   Updated: 2024/03/01 13:30:27 by gepavel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	ft_printf(const char *format, ...)
 		}
 		else
 		{
-			if (!ft_printf_c(*format++))
+			if (ft_printf_c(*format++) != 1)
 				return (-1);
 			x++;
 		}

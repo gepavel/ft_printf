@@ -6,7 +6,7 @@
 /*   By: gepavel <gepavel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:59:47 by gepavel           #+#    #+#             */
-/*   Updated: 2024/02/27 18:45:56 by gepavel          ###   ########.fr       */
+/*   Updated: 2024/03/01 14:28:46 by gepavel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,24 @@ int	main()
 
 	printf("\033[0;35m----->[%%p]<-----\033[0m\n");
 	
-	
+	/*
 	x = ft_printf("%s", (char *)0);
 	printf("-%d-\n", x);
 	x = printf(">%s", NULL);
 	printf("-%d-\n", x);
+	*/
 
 	printf("\033[0;35m----->[%%di]<-----\033[0m\n");
 
 	x = ft_printf(">%d~%i\n", INT_MAX, INT_MIN);
 	printf("-%d-\n", x);
 	x = printf(">%d~%i\n", INT_MAX, INT_MIN);
+		
+	printf("\033[0;35m----->[%%xX]<-----\033[0m\n");
+	
+	x = ft_printf("<%x--%X\n", 20, -1);
+	printf("-%d-\n", x);
+	x = printf(">%x--%X\n", 20, -1);
 	printf("-%d-\n", x);
 
 	printf("\033[0;35m----->[errors]<-----\033[0m\n");
