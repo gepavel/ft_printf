@@ -6,7 +6,7 @@
 /*   By: gepavel <gepavel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 13:53:54 by gepavel           #+#    #+#             */
-/*   Updated: 2024/03/01 13:39:53 by gepavel          ###   ########.fr       */
+/*   Updated: 2024/02/29 13:47:19 by gepavel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	ft_print_adress(unsigned long int n, int count)
 	}
 	if (nb > 9)
 	{
-		if (ft_printf_c(n % 16 - 10 + 'a') != 1)
+		if (ft_printf_c((n % 16 - 10) + 'a') != 1)
 			return (-1);
 		count++;
 	}
